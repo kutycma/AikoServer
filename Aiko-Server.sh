@@ -82,7 +82,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontents.com/AikoPanel/AikoServer/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontents.com/kutycma/AikoServer/master/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -98,7 +98,7 @@ update() {
     else
         version=$2
     fi
-    bash <(curl -Ls https://raw.githubusercontents.com/AikoPanel/AikoServer/master/install.sh) $version
+    bash <(curl -Ls https://raw.githubusercontents.com/kutycma/AikoServer/master/install.sh) $version
     if [[ $? == 0 ]]; then
         echo -e "${green}The update is complete, Aiko-Server has been automatically restarted, please use Aiko-Server log to view the running log${plain}"
         exit
@@ -251,7 +251,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/Aiko-Server -N --no-check-certificate https://raw.githubusercontents.com/AikoPanel/AikoServer/master/Aiko-Server.sh
+    wget -O /usr/bin/Aiko-Server -N --no-check-certificate https://raw.githubusercontents.com/kutycma/AikoServer/master/Aiko-Server.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}Failed to download script. Please check if the local machine can connect to Github${plain}"
@@ -468,7 +468,7 @@ install_rule_list() {
         RuleListPath="/etc/Aiko-Server/rulelist"
         mkdir -p /etc/Aiko-Server/  # Create directory if it does not exist
         
-        if wget https://raw.githubusercontent.com/AikoPanel/AikoServer/master/config/rulelist -O "$RuleListPath"; then
+        if wget https://raw.githubusercontent.com/kutycma/AikoServer/master/config/rulelist -O "$RuleListPath"; then
             sed -i "s|RuleListPath:.*|RuleListPath: ${RuleListPath}|" "$CONFIG_FILE"
             echo -e "${green}rulelist has been installed!${plain}\n"
         else
