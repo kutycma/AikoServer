@@ -10,7 +10,7 @@ Aiko-Server Projects
 
 # Description of Aiko-Server
 
-Aiko-Server Supports Only AikoPanel
+Aiko-Server Supports Only AikoPanel and ZicBoard Mod
 
 An Xray-based back-end framework, supporting V2ay, Trojan, Shadowsocks protocols, extremely easily extensible and supporting multi-panel connection。
 
@@ -68,7 +68,7 @@ This project is for my personal learning, development and maintenance only, I do
 ## Software installation - release
 
 ```
-wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/AikoPanel/AikoServer/master/install.sh && bash Aiko-Server.sh
+wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/kutycma/AikoServer/master/install.sh && bash Aiko-Server.sh
 ```
 
 ## Aiko-Server Community Support
