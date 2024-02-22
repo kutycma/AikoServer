@@ -528,6 +528,7 @@ show_menu() {
     echo -e "
   ${green}Aiko-Server Backend Management Script, ${plain}${red}not for docker${plain}
 --- https://github.com/AikoPanel/Aiko-Server ---
+--- Đã Hỗ trợ ZicBoard ---
   ${green}0.${plain} Modify configuration
 ————————————————
   ${green}1.${plain} Install Aiko-Server
@@ -555,7 +556,7 @@ show_menu() {
  
  "
     show_status
-    echo && read -rp "Please enter options [0-17]: " num
+    echo && read -rp "Please enter options [0-19]: " num
 
     case "${num}" in
         0) config ;;
@@ -578,7 +579,7 @@ show_menu() {
         17) generate_certificate ;;
         18) generate_config_default ;;
         19) install_rule_list ;;
-        *) echo -e "${red}Please enter the correct number [0-16]${plain}" ;;
+        *) echo -e "${red}Please enter the correct number [0-19]${plain}" ;;
     esac
 }
 
